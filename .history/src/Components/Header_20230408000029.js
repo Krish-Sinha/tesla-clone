@@ -32,7 +32,7 @@ function Header() {
 
 			<BurgerMenu show={burgerStatus}>
 				<CloseWrapper>
-					<CustomClose onClick={() => setBurgerStatus(false)} />
+					<CustomClose />
 				</CloseWrapper>
 
 				<li>
@@ -122,7 +122,6 @@ const BurgerMenu = styled.div`
 	flex-direction: column;
 	text-align: start;
 	transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
-	transition: transform 0.2s;
 
 	li {
 		padding: 15px 0;

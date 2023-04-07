@@ -1,10 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 
 function Header() {
-	const [burgerStatus, setBurgerStatus] = useState(false)
 	return (
 		<Container>
 			<a>
@@ -27,12 +26,12 @@ function Header() {
 			<RightMenu>
 				<a href="#">Shop</a>
 				<a href="#">Tesla Account</a>
-				<CustomMenu onClick={() => setBurgerStatus(true)} />
+				<CustomMenu />
 			</RightMenu>
 
-			<BurgerMenu show={burgerStatus}>
+			<BurgerMenu>
 				<CloseWrapper>
-					<CustomClose onClick={() => setBurgerStatus(false)} />
+					<CustomClose />
 				</CloseWrapper>
 
 				<li>
@@ -121,8 +120,6 @@ const BurgerMenu = styled.div`
 	display: flex;
 	flex-direction: column;
 	text-align: start;
-	transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
-	transition: transform 0.2s;
 
 	li {
 		padding: 15px 0;
