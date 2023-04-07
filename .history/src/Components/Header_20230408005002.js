@@ -39,21 +39,9 @@ function Header() {
 					<CustomClose onClick={() => setBurgerStatus(false)} />
 				</CloseWrapper>
 
-				{cars &&
-					cars.map((car, index) => (
-						<li>
-							<a
-								key="index"
-								href="#">
-								{car}
-							</a>
-						</li>
-					))}
-
 				<li>
-					<a href="#">Existing Inventory</a>
+					<a href="#">Exisitng Inventory</a>
 				</li>
-
 				<li>
 					<a href="#">Used Inventory</a>
 				</li>
@@ -65,6 +53,12 @@ function Header() {
 				</li>
 				<li>
 					<a href="#">Roadster</a>
+				</li>
+				<li>
+					<a href="#">Model S</a>
+				</li>
+				<li>
+					<a href="#">Model X</a>
 				</li>
 			</BurgerMenu>
 		</Container>
